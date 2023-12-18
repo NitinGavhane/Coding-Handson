@@ -1,0 +1,54 @@
+<!-- create a html document for registering employee, below are the screens for how the page should be rendered in browser (like employeename : and department and submit button) 
+1) Name should not be empty, show validation fail message as invalid name.
+2) Department should not be empty, show validation fail message as invalid department.
+3) when form is submitted, The feedback is given below, please check the third screen.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q.2 Employee Registration</title>
+
+  <script src="script.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input {
+      margin-bottom: 10px;
+    }
+    #feedback {
+      margin-top: 20px;
+      color: green;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Employee Registration</h2>
+  
+  <form id="registrationForm">
+    <label for="employeeName">Employee Name:</label>
+    <input type="text" id="employeeName" name="employeeName">
+
+    <label for="department">Department:</label>
+    <input type="text" id="department" name="department">
+
+    <button type="button" onclick="validateForm()">Submit</button>
+  </form>
+
+  <div id="feedback"></div>
+
+</body>
+</html>
